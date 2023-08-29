@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>网络面板</title>
+    <title>网速测试</title>
     <meta name="keywords" content="IP查询,IP归属查询,在线测速,网速测试,多地IP查询,流量杀手网页,流量杀手在线">
     <meta name="description" content="测试您的网速，多地查询您的IP地址，同时具备网络延迟实时检测">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -79,7 +79,7 @@
                 <div class="col-sm-12 col-md-10 col-xl-8 center-block">
                     <div class="card card-preview">
                         <div class="card-inner mt-3">
-                            <div class="nya-title nk-ibx-action-item progress-rating"><span class="nk-menu-text font-weight-bold">网络面板</span></div>
+                            <div class="nya-title nk-ibx-action-item progress-rating"><span class="nk-menu-text font-weight-bold">主面板</span></div>
                             <div class="form-group"><label class="form-label">测试地址</label>
                                 <div class="form-control-wrap">
                                     <select id='select' onchange="document.getElementById('link').value=this.options[this.selectedIndex].value;setCookie('select',this.selectedIndex,365);" type="text" class="form-control">
@@ -114,15 +114,17 @@
                             <div class="form-group"><label class="form-label">线程</label>
                                 <div class="form-control-wrap number-spinner-wrap"><button onclick="var thread=document.getElementById('thread');if(thread.value!=thread.min)thread.value--;" class="btn btn-icon btn-outline-primary number-spinner-btn number-minus"><em
                       class="icon ni ni-minus"></em></button> <input onchange="var self= document.getElementById('thread');if(self.value<self.min)self.value=self.min;if(self.value>self.max)self.value=self.max" id='thread' type="number" min="1" max="32"
-                                        value=1 class="form-control number-spinner"> <button onclick="var thread=document.getElementById('thread');if(thread.value!=thread.max)thread.value++;" class="btn btn-icon btn-outline-primary number-spinner-btn number-plus"><em class="icon ni ni-plus"></em></button>
+                                        value=32 class="form-control number-spinner"> <button onclick="var thread=document.getElementById('thread');if(thread.value!=thread.max)thread.value++;" class="btn btn-icon btn-outline-primary number-spinner-btn number-plus"><em class="icon ni ni-plus"></em></button>
                                 </div>
                             </div>
                             <div class="form-group" id="back">
                                 <div class="preview-block">
-                                    <div class="custom-control custom-switch checked"><input onclick="musiccontrol(this)" type="checkbox" id="customSwitch2" class="custom-control-input"> <label for="customSwitch2" class="custom-control-label">保持后台运行</label>
+                                    <div class="custom-control custom-switch checked">
+                                        <input onclick="musiccontrol(this)" type="checkbox" id="customSwitch2" class="custom-control-input" checked>
+                                        <label for="customSwitch2" class="custom-control-label">保持后台运行</label>
                                     </div>
                                 </div>
-                            </div>
+                            </div>                            
                             <button onclick="botton_clicked();" type="button" id="do" class="btn btn-dim btn-outline-secondary btn-block card-link">
                 开始
               </button>
